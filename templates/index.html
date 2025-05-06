@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Furniture Extractor</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .error { color: red; }
+        .item-list { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Furniture Extractor</h1>
+    <form method="POST">
+        <input type="url" name="url" placeholder="Enter product URL" required style="width: 70%; padding: 8px;">
+        <button type="submit">Extract</button>
+    </form>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    {% if items %}
+        <div class="item-list">
+            <h3>Found items ({{ items|length }}):</h3>
+            <ul>
+                {% for item in items %}
+                    <li>{{ item }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+</body>
+</html>
