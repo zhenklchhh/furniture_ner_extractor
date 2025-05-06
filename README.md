@@ -18,5 +18,4 @@ A Flask web application that extracts furniture-related products from web pages 
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/furniture-extractor.git
-cd furniture-extractor
+git clone https://github.com/zhenklchhh/furniture-extractor.git
